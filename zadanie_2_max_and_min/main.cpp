@@ -16,8 +16,20 @@ int main( )
 
     std::cout << std::endl;
 
-    std::cout << "min: " << massive[ 0 ] << std::endl;
-    std::cout << "max: " << len << std::endl;
+    int min = massive[ 0 ];
+    int max = massive[ 0 ];
+
+    for ( int i = 1; i < len; i++ )
+    {
+        if ( massive[ i ] < min )
+            min = massive[ i ];
+        
+        if ( massive[ i ] > max )
+            max = massive[ i ];
+    }
+
+    std::cout << "min: " << min << std::endl;
+    std::cout << "max: " << max << std::endl;
 
     return 0;
 }
